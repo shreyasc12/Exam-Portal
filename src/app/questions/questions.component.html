@@ -1,0 +1,101 @@
+
+    <div *ngFor="let a of QuestionList;">
+       
+        <mat-card class="card" color="warn" align="left">
+            <mat-card-content>
+                 <mat-card-title>
+                   Question:- {{a.question}}
+                   <br>
+                   <br> 
+                   <form (ngSubmit) = "onFormSubmit()">
+                      
+        <input type="radio" name="same" id="{{a.option1}}" value="{{a.option1}}" (click)="ansclick($event)">{{a.option1}}
+        <br> <br> 
+        <input type="radio" name="same" id="{{a.option2}}" value="{{a.option2}}" (click)="ansclick($event)">{{a.option2}}
+        <br> <br> 
+        <input type="radio" name="same" id="{{a.option3}}" value="{{a.option3}}" (click)="ansclick($event)">{{a.option3}}
+        <br> <br> 
+        <div *ngIf="user=='student' else show">
+        <input type="button" class="btn btn-primary" value="Submit Answer" (click)='onFormSubmit()' [disabled]="click">
+        </div>
+        <ng-template #show>
+             <!-- <input type="button" value="Add Question">  -->
+         </ng-template>
+    </form>
+                 </mat-card-title>
+                 <mat-card-subtitle> </mat-card-subtitle>
+            </mat-card-content>
+        </mat-card>
+        <br>     
+</div> 
+
+
+
+
+<div *ngIf="user=='admin' else show">
+    <input type="button" class="btn btn-success btn-lg" [routerLink] ="'/addquestion'" value="Add Question" style="margin:auto;display:block">
+
+    </div>
+    <ng-template #show>
+         <input type="button" class="btn btn-success btn-lg" value="Submit Exam" (click)='onExamSubmit()' style="margin:auto;display:block">
+    </ng-template> 
+
+
+
+
+<!-- <div *ngFor="let a of QuestionList;">
+<form>
+                      
+    <input type="radio" id="{{a.option1}}" value="{{a.option1}}" (click)="ansclick($event)">{{a.option1}}
+    <br> <br> 
+    <input type="radio" id="{{a.option2}}" value="{{a.option2}}" (click)="ansclick($event)">{{a.option2}}
+    <br> <br> 
+    <input type="radio" id="{{a.option3}}" value="{{a.option3}}" (click)="ansclick($event)">{{a.option3}}
+    <br> <br> 
+    <input type="button" value="Submit Answer">
+</form>
+</div> -->
+
+    
+
+              
+    <!-- <div *ngFor="let a of QuestionList;">
+       
+        <mat-card class="card" color="warn" align="left">
+            <mat-card-content>
+                 <mat-card-title>
+                   Question:- {{a.question}}
+                   <br>
+                   <br> 
+                   <form (ngSubmit) = "onFormSubmit()">
+                      
+        <input type="radio" name="same" id="{{a.option1}}" value="{{a.option1}}" (click)="ansclick($event)">{{a.option1}}
+        <br> <br> 
+        <input type="radio" name="same" id="{{a.option2}}" value="{{a.option2}}" (click)="ansclick($event)">{{a.option2}}
+        <br> <br> 
+        <input type="radio" name="same" id="{{a.option3}}" value="{{a.option3}}" (click)="ansclick($event)">{{a.option3}}
+        <br> <br> 
+        <div *ngIf="user=='student' else show">
+        <input type="button" value="Submit Answer" (click)='onFormSubmit()'>
+        </div>
+        <ng-template #show>
+            <input type="button" value="Add Question"> -->
+     <!--   </ng-template>
+    </form>
+                 </mat-card-title>
+                 <mat-card-subtitle> </mat-card-subtitle>
+            </mat-card-content>
+        </mat-card>
+        <br>
+       
+</div>
+<div *ngIf="user=='admin' else show">
+    <input type="button" [routerLink] ="'/addquestion'" value="Add Question">
+    </div>
+    <ng-template #show>
+         <input type="button" value="Submit Exam" (click)='onExamSubmit()'>
+    </ng-template>  -->
+           
+
+
+       

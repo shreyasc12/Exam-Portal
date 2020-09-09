@@ -1,0 +1,38 @@
+<div class = "container">
+       
+    <div class="row">
+        <div class="col-lg-4"></div>
+        <div class="col-lg-4">
+          
+            <form #userregistration="ngForm" (ngSubmit) = "onFormSubmit(userregistration.value)">
+                <h1 class="display-5" align="center">Sign Up</h1>
+                <div class="form-group">
+                    <label for="rollno">Rollno:</label>
+                    <input type="number" class="form-control" id="rollno" placeholder="Enter Rollno" name="rollno" ngModel>
+                  
+                </div>
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" class="form-control" id="name" placeholder="Enter Your name" name="name" ngModel>
+                    <p *ngIf="namevalidator(); else hi"></p>
+                    <ng-template #hi>Enter name</ng-template>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" class="form-control" id="email" placeholder="Enter Your Email" name="email" ngModel>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password:</label>
+                    <input type="password" class="form-control" id="password" placeholder="Enter Password" name="password" ngModel>
+                </div>
+
+               
+                <button type="submit" class="btn btn-success">Register</button>
+
+                 </form>
+           
+        </div>
+    </div>
+</div> 
+
+

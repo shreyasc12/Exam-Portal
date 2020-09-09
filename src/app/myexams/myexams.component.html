@@ -1,0 +1,19 @@
+<h1 align="center"><b>MY EXAMS</b></h1>
+<mat-grid-list cols="3" rowHeight="2:1">
+    <div>
+        <div *ngFor="let item of markslist;">
+            <mat-grid-tile >
+            <button class = "btn btn-info btn-lg" name="{{item.examid}}" id="{{item.examid}}"  height="200px" width="300px">
+                <mat-icon aria-hidden="false" aria-label="Example home icon" siz>assignment</mat-icon>
+                <br>
+                Exam ID:-{{item.examid}}
+                <br>
+                Marks Scored:-{{item.marks}}
+            </button>
+          
+                <!-- <button mat-flat-button color="primary" id="{{item.examid}}"  (click)="showQues($event)"> -->
+            </mat-grid-tile>
+    
+        </div> 
+    </div>
+    </mat-grid-list> 

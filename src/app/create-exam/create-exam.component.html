@@ -1,0 +1,28 @@
+<div class = "container">
+       
+    <div class="row">
+        <div class="col-lg-4"></div>
+        <div class="col-lg-4">
+          
+            <form #userregistration="ngForm" (ngSubmit) = "onFormSubmit(userregistration.value)">
+                <h1 class="display-5" align="center">Enter Exam Details</h1>
+                <div class="form-group">
+                    <label for="examid">Examid:</label>
+                    <input type="number" class="form-control" id="examid" placeholder="Enter Unique Examid" name="examid" ngModel>
+                  
+                </div>
+                <div class="form-group">
+                    <label for="name">Exam Name:</label>
+                    <input type="text" class="form-control" id="examname" placeholder="Enter Exam name" name="examname" ngModel>
+                   
+                </div>
+                
+                <button type="submit" class="btn btn-success">Create Exam</button>
+
+                 </form>
+           
+        </div>
+    </div>
+</div> 
+
+

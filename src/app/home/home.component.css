@@ -1,0 +1,18 @@
+.jumbotron{
+    background-image: url(src\assets\images\exam_6.png);
+    background-size:cover;
+    padding-top: 12%;
+    padding-bottom: 20%;
+}
+.jumbotron h1 {
+    position: relative;
+    display: block;
+    font-weight: bold;
+    font-size: 30px;
+    color:black;
+}
+.my-class{
+    width: 100px!important;
+    height: 50px;
+    min-width: unset!important;
+}

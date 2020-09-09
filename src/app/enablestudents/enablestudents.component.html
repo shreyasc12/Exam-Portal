@@ -1,0 +1,45 @@
+<div class = "container">
+       
+    <div class="row">
+        <div class="col-lg-4"></div>
+        <div class="col-lg-4">
+          
+            <div class="card" style="width: 18rem;">
+                <div class="card-body">
+                  <h5 class="card-title">   </h5>
+                  <mat-icon aria-hidden="false" aria-label="Example home icon">library_add_check</mat-icon>
+                  <br><br>
+                    <ol style="list-style: none;" align="center">
+                        <h1><u><b>New Requests:</b></u></h1>
+                    <h1>
+                    <li *ngFor="let item of NewRequests;" > 
+                       
+                        {{item.name}}-:
+                        <button class = "btn btn-success btn-lg" name="{{item.rollno}}" id="{{item.rollno}}"  (click)="showQues($event)" height="70px" width="100px">Enable</button>
+                        <!-- <p *ngIf="flag; else hi">This is my paragraph</p>
+                    <ng-template #hi>****This is hi*****</ng-template>
+                    <ul> -->
+                        <br><br>
+                    </li>
+                    </h1>
+                    <h1><u><b>Enabled Students:</b></u></h1>
+                    <h1>
+                    <li *ngFor="let item of enabledStudents;"> 
+                        {{item}}
+                        <!-- <p *ngIf="flag; else hi">This is my paragraph</p>
+                    <ng-template #hi>****This is hi*****</ng-template>
+                    <ul> -->
+                    
+                    </li>
+                </h1>
+                
+                    </ol>
+                 
+              </div>
+           
+        </div>
+    </div>
+</div> 
+
+
+
